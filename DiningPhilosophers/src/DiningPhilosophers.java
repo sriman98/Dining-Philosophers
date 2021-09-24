@@ -24,7 +24,7 @@ public class DiningPhilosophers {
         }
         Object leftChopStick = chopSticks[philosophers.length-1];
         Object rightChopStick = chopSticks[0];
-        philosophers[philosophers.length-1] = new Philosopher(leftChopStick,rightChopStick);
+        philosophers[philosophers.length-1] = new Philosopher(rightChopStick,leftChopStick);
         Thread t = new Thread(philosophers[philosophers.length-1], "Philosopher " + (philosophers.length));
         t.start();
     }
